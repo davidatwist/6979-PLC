@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="19.01" TargetName="LD57160B" TargetType="Controller" ContainsContext="false" Owner="Adapt, Adapt" ExportDate="Thu Jun 18 16:37:28 2015" ExportOptions="DecoratedData ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Target" Name="LD57160B" ProcessorType="1756-L61" MajorRev="19" MinorRev="11" TimeSlice="20" ShareUnusedTimeSlice="1" ProjectCreationDate="Sat Dec 08 08:18:55 2012" LastModifiedDate="Thu Jun 18 15:40:58 2015" SFCExecutionControl="CurrentActive" SFCRestartPosition="MostRecent"
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="19.01" TargetName="LD57160B" TargetType="Controller" ContainsContext="false" Owner="Adapt, Adapt" ExportDate="Fri Jun 19 16:39:15 2015" ExportOptions="DecoratedData ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Target" Name="LD57160B" ProcessorType="1756-L61" MajorRev="19" MinorRev="11" TimeSlice="20" ShareUnusedTimeSlice="1" ProjectCreationDate="Sat Dec 08 08:18:55 2012" LastModifiedDate="Fri Jun 19 16:35:44 2015" SFCExecutionControl="CurrentActive" SFCRestartPosition="MostRecent"
  SFCLastScan="DontScan" ProjectSN="16#008b_27dd" MatchProjectToController="false" CanUseRPIFromProducer="false" InhibitAutomaticFirmwareUpdate="0">
 <Description>
 <![CDATA[6979 Hi-Shear Bridgewire Welder after changes to handle 3 and 4 pin parts]]>
@@ -445,12 +445,12 @@ Absolute Master Offset-5
 <![CDATA[Wire X Pos from Start Pin Center]]>
 </Description>
 </Member>
-<Member Name="LHYFromStartCenter" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="LHYFromPinEdge" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[0 = Auto, or other = Value]]>
 </Description>
 </Member>
-<Member Name="RHYFromStartCenter" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="RHYFromPinEdge" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[0 = Auto, or other = Value]]>
 </Description>
@@ -909,7 +909,7 @@ Left Side Welder]]>
 </Data>
 </InputTag>
 <OutputTag>
-<Data>00 C9 00 12 23 30 31 20 53 59 53 54 45 4D 20 52 
+<Data>00 CB 00 12 23 30 31 20 53 59 53 54 45 4D 20 52 
 45 41 44 0D 0A 0A 55 44 4E 45 53 53 31 30 0D 0A 
 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -918,7 +918,7 @@ Left Side Welder]]>
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00</Data>
-<ForceData>00 C9 00 12 23 30 31 20 53 59 53 54 45 4D 20 52 
+<ForceData>00 CB 00 12 23 30 31 20 53 59 53 54 45 4D 20 52 
 45 41 44 0D 0A 0A 55 44 4E 45 53 53 31 30 0D 0A 
 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -946,7 +946,7 @@ Left Side Welder]]>
 <Data Format="Decorated">
 <Structure DataType="AB:1734_232ASC_127Bytes:O:0">
 <DataValueMember Name="NextTransmitRecordNumber" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="TransmitRecordNumber" DataType="SINT" Radix="Decimal" Value="-55"/>
+<DataValueMember Name="TransmitRecordNumber" DataType="SINT" Radix="Decimal" Value="-53"/>
 <DataValueMember Name="Length" DataType="SINT" Radix="Decimal" Value="18"/>
 <ArrayMember Name="Data" DataType="SINT" Dimensions="127" Radix="Decimal">
 <Element Index="[0]" Value="35"/>
@@ -1291,7 +1291,7 @@ Right Side Welder]]>
 </Data>
 </InputTag>
 <OutputTag>
-<Data>00 CA 00 12 23 30 31 20 53 59 53 54 45 4D 20 52 
+<Data>00 CC 00 12 23 30 31 20 53 59 53 54 45 4D 20 52 
 45 41 44 0D 0A 0A 55 44 4E 45 53 53 31 30 0D 0A 
 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -1300,7 +1300,7 @@ Right Side Welder]]>
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00</Data>
-<ForceData>00 CA 00 12 23 30 31 20 53 59 53 54 45 4D 20 52 
+<ForceData>00 CC 00 12 23 30 31 20 53 59 53 54 45 4D 20 52 
 45 41 44 0D 0A 0A 55 44 4E 45 53 53 31 30 0D 0A 
 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -1328,7 +1328,7 @@ Right Side Welder]]>
 <Data Format="Decorated">
 <Structure DataType="AB:1734_232ASC_127Bytes:O:0">
 <DataValueMember Name="NextTransmitRecordNumber" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="TransmitRecordNumber" DataType="SINT" Radix="Decimal" Value="-54"/>
+<DataValueMember Name="TransmitRecordNumber" DataType="SINT" Radix="Decimal" Value="-52"/>
 <DataValueMember Name="Length" DataType="SINT" Radix="Decimal" Value="18"/>
 <ArrayMember Name="Data" DataType="SINT" Dimensions="127" Radix="Decimal">
 <Element Index="[0]" Value="35"/>
@@ -3075,8 +3075,8 @@ FA 00 00 00</Data>
 <Connections>
 <Connection Name="FloatHighSpeed" RPI="10000" Type="Input" EventID="0" ProgrammaticallySendEventTrigger="false">
 <InputTag>
-<ForceData>00 00 00 00 00 00 00 00 A6 F2 92 3F 00 00 24 41 
-81 17 24 41 00 00 00 00 00 00 00 00 00 00 00 00 
+<ForceData>00 00 00 00 00 00 00 00 26 30 93 3F 00 00 24 41 
+13 7A 24 41 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00</ForceData>
 <Data Format="Decorated">
@@ -3106,9 +3106,9 @@ FA 00 00 00</Data>
 <DataValueMember Name="Ch1HAlarm" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Ch1LLAlarm" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Ch1HHAlarm" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Ch0Data" DataType="REAL" Radix="Float" Value="1.1477172"/>
+<DataValueMember Name="Ch0Data" DataType="REAL" Radix="Float" Value="1.1495941"/>
 <DataValueMember Name="Ch1Data" DataType="REAL" Radix="Float" Value="10.25"/>
-<DataValueMember Name="RollingTimestamp" DataType="INT" Radix="Decimal" Value="10082"/>
+<DataValueMember Name="RollingTimestamp" DataType="INT" Radix="Decimal" Value="2533"/>
 </Structure>
 </Data>
 </InputTag>
@@ -3669,7 +3669,7 @@ FA 00 00 00</Data>
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="CalcPosNextSegmentLD" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2015-06-09T16:44:07.567Z" CreatedBy="Test_PC\Operator" EditedDate="2015-06-18T22:35:02.229Z" EditedBy="Test_PC\Operator" SoftwareRevision="v19.01">
+<AddOnInstructionDefinition Name="CalcPosNextSegmentLD" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2015-06-09T16:44:07.567Z" CreatedBy="Test_PC\Operator" EditedDate="2015-06-19T22:44:23.083Z" EditedBy="Test_PC\Operator" SoftwareRevision="v19.01">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
@@ -3806,83 +3806,6 @@ FA 00 00 00</Data>
 <DataValue DataType="REAL" Radix="Float" Value="0.0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="mstrPinSet" DataType="STRING" ExternalAccess="None">
-<DefaultData>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00</DefaultData>
-<DefaultData Format="String" Length="0">
-<![CDATA['']]>
-</DefaultData>
-</LocalTag>
-<LocalTag Name="mstrAB" DataType="STRING" ExternalAccess="None">
-<DefaultData>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00</DefaultData>
-<DefaultData Format="String" Length="0">
-<![CDATA['']]>
-</DefaultData>
-</LocalTag>
-<LocalTag Name="mstrBC" DataType="STRING" ExternalAccess="None">
-<DefaultData>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00</DefaultData>
-<DefaultData Format="String" Length="0">
-<![CDATA['']]>
-</DefaultData>
-</LocalTag>
-<LocalTag Name="mstrCD" DataType="STRING" ExternalAccess="None">
-<DefaultData>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00</DefaultData>
-<DefaultData Format="String" Length="0">
-<![CDATA['']]>
-</DefaultData>
-</LocalTag>
-<LocalTag Name="mstrDA" DataType="STRING" ExternalAccess="None">
-<DefaultData>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00</DefaultData>
-<DefaultData Format="String" Length="0">
-<![CDATA['']]>
-</DefaultData>
-</LocalTag>
-<LocalTag Name="mstrAC" DataType="STRING" ExternalAccess="None">
-<DefaultData>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00</DefaultData>
-<DefaultData Format="String" Length="0">
-<![CDATA['']]>
-</DefaultData>
-</LocalTag>
-<LocalTag Name="mstrBD" DataType="STRING" ExternalAccess="None">
-<DefaultData>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00</DefaultData>
-<DefaultData Format="String" Length="0">
-<![CDATA['']]>
-</DefaultData>
-</LocalTag>
 <LocalTag Name="mdblLHRow" DataType="REAL" Radix="Float" ExternalAccess="None">
 <DefaultData>00 00 00 00</DefaultData>
 <DefaultData Format="Decorated">
@@ -3974,6 +3897,42 @@ FA 00 00 00</Data>
 </DefaultData>
 </LocalTag>
 <LocalTag Name="mdblDistLHtoRHQuadrantsInch" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="mdblWireXMove" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="mdblXOffsetFromSegmentData" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="mdblLHElectrodeYMove" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="mdblLHGapFromEdgeOfPin" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="mdblRHGapFromEdgeOfPin" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="mdblRHElectrodeYMove" DataType="REAL" Radix="Float" ExternalAccess="None">
 <DefaultData>00 00 00 00</DefaultData>
 <DefaultData Format="Decorated">
 <DataValue DataType="REAL" Radix="Float" Value="0.0"/>
@@ -4200,39 +4159,177 @@ FA 00 00 00</Data>
 <![CDATA[]]>
 </Line>
 <Line Number="72">
-<![CDATA[]]>
+<![CDATA[// Calculate dblWireXMove]]>
 </Line>
 <Line Number="73">
-<![CDATA[]]>
+<![CDATA[mdblWireXMove := udtThisPart.NominalWireXPosition + mdblRowOffCalCentAtRadInch;		//add the Vision Offset Value from Cal Center to Pin Center]]>
 </Line>
 <Line Number="74">
-<![CDATA[]]>
+<![CDATA[mdblXOffsetFromSegmentData := udtThisSegment.WireXFromStartCenter;	//Get Raw value from Segment Data before manipulation]]>
 </Line>
 <Line Number="75">
 <![CDATA[]]>
 </Line>
 <Line Number="76">
-<![CDATA[//Indicate Complete]]>
+<![CDATA[if Not bPartMoves then]]>
 </Line>
 <Line Number="77">
-<![CDATA[EnableOut := 1;]]>
+<![CDATA[	mdblXOffsetFromSegmentData := -mdblXOffsetFromSegmentData;		//If the wire moves instead of the part, as in an automatic BWW then invert the sign]]>
 </Line>
 <Line Number="78">
-<![CDATA[]]>
+<![CDATA[end_if;]]>
 </Line>
 <Line Number="79">
-<![CDATA[//Capture End Time (microseconds)]]>
+<![CDATA[]]>
 </Line>
 <Line Number="80">
-<![CDATA[GSV(WALLCLOCKTIME,,CURRENTVALUE,mdintEndTIme[0]);]]>
+<![CDATA[mdblWireXMove := mdblWireXMove + mdblXOffsetFromSegmentData;		//Add the segment offset]]>
 </Line>
 <Line Number="81">
 <![CDATA[]]>
 </Line>
 <Line Number="82">
-<![CDATA[//Calculate Elapsed Time (microseconds)]]>
+<![CDATA[if not bServoXMovePosToWeldHds then]]>
 </Line>
 <Line Number="83">
+<![CDATA[	mdblWireXMove := -mdblWireXMove;]]>
+</Line>
+<Line Number="84">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="85">
+<![CDATA[]]>
+</Line>
+<Line Number="86">
+<![CDATA[//Calculate Y Offsets for LH and RH electrodes based on SegmentData]]>
+</Line>
+<Line Number="87">
+<![CDATA[// if LHYFromPinEdge = 0 and RHYFromPinEdge = 0 then split the difference and position automatically]]>
+</Line>
+<Line Number="88">
+<![CDATA[// if LHYFromPinEdge = 0 and RHYFromPinEdge <> 0 then use RHYFromPinEdge and calc LHYFromPinEdg using pitch]]>
+</Line>
+<Line Number="89">
+<![CDATA[// if LHYFromPinEdge <> 0 and RHYFromPinEdge = 0 then use LHYFromPinEdge and calc RHYFromPinEdg using pitch]]>
+</Line>
+<Line Number="90">
+<![CDATA[// if LHYFromPinEdge <> 0 and RHYFromPinEdge <> 0 then use RHYFromPinEdge and LHYFromPinEdge and disregard pitch]]>
+</Line>
+<Line Number="91">
+<![CDATA[ ]]>
+</Line>
+<Line Number="92">
+<![CDATA[]]>
+</Line>
+<Line Number="93">
+<![CDATA[]]>
+</Line>
+<Line Number="94">
+<![CDATA[if udtThisSegment.LHYFromPinEdge = 0 and udtThisSegment.LHYFromPinEdge = 0 then]]>
+</Line>
+<Line Number="95">
+<![CDATA[	mdblLHGapFromEdgeOfPin := (udtThisSegment.ElectrodePitch - mdblDistLHtoRHQuadrantsInch)/2;	//Split the difference between the observed distance and the electrode pitch]]>
+</Line>
+<Line Number="96">
+<![CDATA[	mdblRHGapFromEdgeOfPin := mdblLHGapFromEdgeOfPin;]]>
+</Line>
+<Line Number="97">
+<![CDATA[elsif udtThisSegment.LHYFromPinEdge <> 0 and udtThisSegment.RHYFromPinEdge = 0 then]]>
+</Line>
+<Line Number="98">
+<![CDATA[	mdblLHGapFromEdgeOfPin := abs(udtThisSegment.LHYFromPinEdge);	//Use the data from the SegmentData directly]]>
+</Line>
+<Line Number="99">
+<![CDATA[	mdblRHGapFromEdgeOfPin := udtThisSegment.ElectrodePitch - mdblDistLHtoRHQuadrantsInch-mdblLHGapFromEdgeOfPin;]]>
+</Line>
+<Line Number="100">
+<![CDATA[elsif udtThisSegment.LHYFromPinEdge = 0 and udtThisSegment.RHYFromPinEdge <> 0 then]]>
+</Line>
+<Line Number="101">
+<![CDATA[	mdblRHGapFromEdgeOfPin := abs(udtThisSegment.RHYFromPinEdge);	//Use the data from the SegmentData directly]]>
+</Line>
+<Line Number="102">
+<![CDATA[	mdblLHGapFromEdgeOfPin := udtThisSegment.ElectrodePitch - mdblDistLHtoRHQuadrantsInch-mdblRHGapFromEdgeOfPin;]]>
+</Line>
+<Line Number="103">
+<![CDATA[else]]>
+</Line>
+<Line Number="104">
+<![CDATA[	mdblLHGapFromEdgeOfPin := abs(udtThisSegment.LHYFromPinEdge);	//Use the data from the SegmentData directly]]>
+</Line>
+<Line Number="105">
+<![CDATA[	mdblRHGapFromEdgeOfPin := abs(udtThisSegment.RHYFromPinEdge);	//Use the data from the SegmentData directly]]>
+</Line>
+<Line Number="106">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="107">
+<![CDATA[]]>
+</Line>
+<Line Number="108">
+<![CDATA[]]>
+</Line>
+<Line Number="109">
+<![CDATA[//Calculate dblLHElectrodeYMove]]>
+</Line>
+<Line Number="110">
+<![CDATA[mdblLHElectrodeYMove := udtThisPart.NominalLHElectrodeYPosition + mdblLHColOffCalCentAtRadInch-mdblLHGapFromEdgeOfPin;	//add the Vision Offset Value from Cal Center to Pin Quadrant]]>
+</Line>
+<Line Number="111">
+<![CDATA[]]>
+</Line>
+<Line Number="112">
+<![CDATA[]]>
+</Line>
+<Line Number="113">
+<![CDATA[//Calculate dblRHElectrodeYMove]]>
+</Line>
+<Line Number="114">
+<![CDATA[mdblRHElectrodeYMove := (udtThisPart.NominalLHElectrodeYPosition-udtThisPart.TipGap-udtThisPart.MinWeldNuggetPitch) + mdblRHColOffCalCentAtRadInch + mdblRHGapFromEdgeOfPin;	//add the Vision Offset Value from Cal Center to Pin Quadrant]]>
+</Line>
+<Line Number="115">
+<![CDATA[]]>
+</Line>
+<Line Number="116">
+<![CDATA[]]>
+</Line>
+<Line Number="117">
+<![CDATA[// Set Output Parameters]]>
+</Line>
+<Line Number="118">
+<![CDATA[dblWireXMove := mdblWireXMove;]]>
+</Line>
+<Line Number="119">
+<![CDATA[dblLHElectrodeYMove := mdblLHElectrodeYMove;]]>
+</Line>
+<Line Number="120">
+<![CDATA[dblRHElectrodeYMove := mdblRHElectrodeYMove;]]>
+</Line>
+<Line Number="121">
+<![CDATA[]]>
+</Line>
+<Line Number="122">
+<![CDATA[//Indicate Complete]]>
+</Line>
+<Line Number="123">
+<![CDATA[EnableOut := 1;]]>
+</Line>
+<Line Number="124">
+<![CDATA[]]>
+</Line>
+<Line Number="125">
+<![CDATA[//Capture End Time (microseconds)]]>
+</Line>
+<Line Number="126">
+<![CDATA[GSV(WALLCLOCKTIME,,CURRENTVALUE,mdintEndTIme[0]);]]>
+</Line>
+<Line Number="127">
+<![CDATA[]]>
+</Line>
+<Line Number="128">
+<![CDATA[//Calculate Elapsed Time (microseconds)]]>
+</Line>
+<Line Number="129">
 <![CDATA[dintElapsedTimeMicroSec := mdintEndTIme[0]-mdintStartTime[0];]]>
 </Line>
 </STContent>
@@ -4671,7 +4768,7 @@ FA 00 00 00</Data>
 </AddOnInstructionDefinitions>
 <Tags>
 <Tag Name="aoiCalcInitRotation" TagType="Base" DataType="CalcInitRotationLD" Constant="false" ExternalAccess="Read/Write">
-<Data>04 00 00 00 00 CF 86 3F 00 00 34 42 00 00 00 00 
+<Data>04 00 00 00 10 A5 31 42 00 00 34 42 00 00 00 00 
 00 41 72 3F 34 00 00 00 00 41 72 3F 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 E5 59 2B 08 AA 18 05 00 
@@ -4681,7 +4778,7 @@ FA 00 00 00</Data>
 <Structure DataType="CalcInitRotationLD">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="0"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
-<DataValueMember Name="dblCenterToAAngle" DataType="REAL" Radix="Float" Value="1.0531921"/>
+<DataValueMember Name="dblCenterToAAngle" DataType="REAL" Radix="Float" Value="44.411194"/>
 <DataValueMember Name="dblPinAAngle" DataType="REAL" Radix="Float" Value="45.0"/>
 <DataValueMember Name="bCWPositive" DataType="BOOL" Value="1"/>
 <DataValueMember Name="dintStatus" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -4692,54 +4789,17 @@ FA 00 00 00</Data>
 </Tag>
 <Tag Name="aoiCalcPosNextSegment" TagType="Base" DataType="CalcPosNextSegmentLD" Constant="false" ExternalAccess="Read/Write">
 <Data>0C 00 00 00 71 9D C5 43 48 E1 6B 43 00 68 2C 45 
+00 00 00 00 FD 71 35 41 00 00 00 00 00 00 00 00 
+B9 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-7C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-FD C9 4F B7 D2 18 05 00 00 00 00 00 81 C9 4F B7 
-D2 18 05 00 00 00 00 00 00 00 00 00 D6 D2 99 43 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 00 00 00 00 00 5D DC 13 43 8C 56 73 43 
-50 B6 6D 42 CA A6 0F 43 36 BD 09 44 18 DD 7E 42 
-56 E4 17 C3 D6 09 B0 C2 F6 B9 1B 43 FC 74 B8 C2 
-18 5B F4 C2 A6 BC F7 42 EF 6A 35 BD 8D ED 37 3D 
-5E D2 05 BD 3E AC B6 3D</Data>
+EE DF 5F 07 E3 18 05 00 00 00 00 00 35 DF 5F 07 
+E3 18 05 00 00 00 00 00 00 00 00 00 D6 D2 99 43 
+5D DC 13 43 8C 56 73 43 50 B6 6D 42 CA A6 0F 43 
+36 BD 09 44 18 DD 7E 42 56 E4 17 C3 D6 09 B0 C2 
+F6 B9 1B 43 FC 74 B8 C2 18 5B F4 C2 A6 BC F7 42 
+EF 6A 35 BD 8D ED 37 3D 5E D2 05 BD 3E AC B6 3D 
+FD 71 35 41 6F 12 83 BB 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="CalcPosNextSegmentLD">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="0"/>
@@ -4750,10 +4810,10 @@ D2 18 05 00 00 00 00 00 00 00 00 00 D6 D2 99 43
 <DataValueMember Name="dblCalCenterRow" DataType="REAL" Radix="Float" Value="235.88"/>
 <DataValueMember Name="dblCalPixelsPerInch" DataType="REAL" Radix="Float" Value="2758.5"/>
 <DataValueMember Name="dintStatus" DataType="DINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="dblWireXMove" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="dblWireXMove" DataType="REAL" Radix="Float" Value="11.340329"/>
 <DataValueMember Name="dblLHElectrodeYMove" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="dblRHElectrodeYMove" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="dintElapsedTimeMicroSec" DataType="DINT" Radix="Decimal" Value="124"/>
+<DataValueMember Name="dintElapsedTimeMicroSec" DataType="DINT" Radix="Decimal" Value="185"/>
 </Structure>
 </Data>
 </Tag>
@@ -8931,7 +8991,7 @@ C8 00 00 00 C8 00 00 00 00 00 00 00 00 00 00 00
 <Data>24 32 3F 00 88 13 00 00 00 00 00 00 9B 86 35 A0 
 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 35 97 03 00 BC 02 00 00 00 00 00 00 
-35 97 03 00 20 03 00 00 00 00 00 00 54 51 11 A0 
+35 97 03 00 20 03 00 00 00 00 00 00 42 1C 36 A0 
 00 00 00 00 06 00 00 00 00 00 00 00 3F 42 0F 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -9929,9 +9989,9 @@ C8 00 00 00 C8 00 00 00 00 00 00 00 00 00 00 00
 </Data>
 </Tag>
 <Tag Name="gdblLiveTension" TagType="Base" DataType="REAL" Radix="Float" Constant="false" ExternalAccess="Read/Write">
-<Data>00 95 18 BF</Data>
+<Data>80 96 10 BF</Data>
 <Data Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="-0.59602356"/>
+<DataValue DataType="REAL" Radix="Float" Value="-0.56479645"/>
 </Data>
 </Tag>
 <Tag Name="gdblNumberPositions" TagType="Base" DataType="REAL" Radix="Float" Constant="false" ExternalAccess="Read/Write">
@@ -10353,9 +10413,9 @@ C8 00 00 00 C8 00 00 00 00 00 00 00 00 00 00 00
 <Tag Name="glngSERCOSWireTurretErrorCode2" TagType="Alias" Radix="Decimal" AliasFor="garlngSercosErrorCode[1,1]" ExternalAccess="Read/Write"/>
 <Tag Name="glngSERCOSWireTurretErrorCode3" TagType="Alias" Radix="Decimal" AliasFor="garlngSercosErrorCode[1,2]" ExternalAccess="Read/Write"/>
 <Tag Name="glngServoOff" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
-<Data>00 00 00 00</Data>
+<Data>08 00 00 00</Data>
 <Data Format="Decorated">
-<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValue DataType="DINT" Radix="Decimal" Value="8"/>
 </Data>
 </Tag>
 <Tag Name="glngServoOn" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
@@ -10674,7 +10734,7 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 00 00 C8 42 00 00 80 3F 00 00 A0 41 00 00 80 41 
 00 00 C8 42 00 00 C8 C2 00 00 C8 42 00 00 C8 C2 
 1C 00 00 00 36 39 37 39 20 48 65 61 64 65 72 20 
-4D 61 70 20 56 69 73 69 6F 6E 20 43 2E 6A 6F 62 
+4D 61 70 20 56 69 73 69 6F 6E 20 44 2E 6A 6F 62 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -10727,7 +10787,7 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <StructureMember Name="MapProd" DataType="STRING">
 <DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
 <DataValueMember Name="DATA" DataType="STRING" Radix="ASCII">
-<![CDATA['6979 Header Map Vision C.job']]>
+<![CDATA['6979 Header Map Vision D.job']]>
 </DataValueMember>
 </StructureMember>
 <DataValueMember Name="TipGap" DataType="REAL" Radix="Float" Value="0.36"/>
@@ -10929,8 +10989,8 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <DataValueMember Name="MultiWeldOffset" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="ElectrodePitch" DataType="REAL" Radix="Float" Value="0.097"/>
 <DataValueMember Name="WireXFromStartCenter" DataType="REAL" Radix="Float" Value="-0.004"/>
-<DataValueMember Name="LHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.02"/>
-<DataValueMember Name="RHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.03"/>
+<DataValueMember Name="LHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.02"/>
+<DataValueMember Name="RHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.03"/>
 </Structure>
 </Element>
 <Element Index="[1]">
@@ -10953,8 +11013,8 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <DataValueMember Name="MultiWeldOffset" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="ElectrodePitch" DataType="REAL" Radix="Float" Value="0.097"/>
 <DataValueMember Name="WireXFromStartCenter" DataType="REAL" Radix="Float" Value="-0.004"/>
-<DataValueMember Name="LHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="RHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="LHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
 </Structure>
 </Element>
 <Element Index="[2]">
@@ -10977,8 +11037,8 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <DataValueMember Name="MultiWeldOffset" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="ElectrodePitch" DataType="REAL" Radix="Float" Value="0.141"/>
 <DataValueMember Name="WireXFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="LHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="RHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="LHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
 </Structure>
 </Element>
 <Element Index="[3]">
@@ -11001,8 +11061,8 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <DataValueMember Name="MultiWeldOffset" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="ElectrodePitch" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="WireXFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="LHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="RHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="LHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
 </Structure>
 </Element>
 <Element Index="[4]">
@@ -11025,8 +11085,8 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <DataValueMember Name="MultiWeldOffset" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="ElectrodePitch" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="WireXFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="LHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="RHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="LHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
 </Structure>
 </Element>
 <Element Index="[5]">
@@ -11049,8 +11109,8 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <DataValueMember Name="MultiWeldOffset" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="ElectrodePitch" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="WireXFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="LHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="RHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="LHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
 </Structure>
 </Element>
 <Element Index="[6]">
@@ -11073,8 +11133,8 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <DataValueMember Name="MultiWeldOffset" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="ElectrodePitch" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="WireXFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="LHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="RHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="LHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
 </Structure>
 </Element>
 <Element Index="[7]">
@@ -11097,8 +11157,8 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <DataValueMember Name="MultiWeldOffset" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="ElectrodePitch" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="WireXFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="LHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="RHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="LHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
 </Structure>
 </Element>
 <Element Index="[8]">
@@ -11121,8 +11181,8 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <DataValueMember Name="MultiWeldOffset" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="ElectrodePitch" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="WireXFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="LHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="RHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="LHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
 </Structure>
 </Element>
 <Element Index="[9]">
@@ -11145,8 +11205,8 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 <DataValueMember Name="MultiWeldOffset" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="ElectrodePitch" DataType="REAL" Radix="Float" Value="0.0"/>
 <DataValueMember Name="WireXFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="LHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="RHYFromStartCenter" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="LHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RHYFromPinEdge" DataType="REAL" Radix="Float" Value="0.0"/>
 </Structure>
 </Element>
 </Array>
@@ -11163,13 +11223,13 @@ EC 51 B8 3E 0A D7 A3 3C 00 00 E0 3F 31 08 36 41
 </Data>
 </Tag>
 <Tag Name="gudtNestShuttlePosition" TagType="Base" DataType="AxisPosition" Constant="false" ExternalAccess="Read/Write">
-<Data>4D 21 25 38 4D 21 A5 38 79 84 A3 BC 00 00 00 00 
+<Data>00 00 00 00 00 00 00 00 0A D7 A3 BC 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="AxisPosition">
-<DataValueMember Name="Actual" DataType="REAL" Radix="Float" Value="3.93700793e-005"/>
-<DataValueMember Name="Scaled" DataType="REAL" Radix="Float" Value="7.87401586e-005"/>
-<DataValueMember Name="Buffered" DataType="REAL" Radix="Float" Value="-0.019960629"/>
+<DataValueMember Name="Actual" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Scaled" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Buffered" DataType="REAL" Radix="Float" Value="-0.02"/>
 <DataValueMember Name="Truncated" DataType="DINT" Radix="Decimal" Value="0"/>
 <ArrayMember Name="MMI" DataType="REAL" Dimensions="2" Radix="Float">
 <Element Index="[0]" Value="0.0"/>
@@ -33295,13 +33355,13 @@ When relay is open "ready to weld"]]>
 </Data>
 </Tag>
 <Tag Name="mtmrFlashOffDelay2" TagType="Base" DataType="TIMER" Constant="false" ExternalAccess="Read/Write">
-<Data>4F 53 11 C0 20 03 00 00 D0 02 00 00</Data>
+<Data>FD 1C 36 00 20 03 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="TIMER">
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="800"/>
-<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="720"/>
-<DataValueMember Name="EN" DataType="BOOL" Value="1"/>
-<DataValueMember Name="TT" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
 <DataValueMember Name="DN" DataType="BOOL" Value="0"/>
 </Structure>
 </Data>
@@ -33319,14 +33379,14 @@ When relay is open "ready to weld"]]>
 </Data>
 </Tag>
 <Tag Name="mtmrFlashOnDelay2" TagType="Base" DataType="TIMER" Constant="false" ExternalAccess="Read/Write">
-<Data>56 53 11 A0 BC 02 00 00 BD 02 00 00</Data>
+<Data>43 1E 36 C0 BC 02 00 00 3F 01 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="TIMER">
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="700"/>
-<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="701"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="319"/>
 <DataValueMember Name="EN" DataType="BOOL" Value="1"/>
-<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
-<DataValueMember Name="DN" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="1"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
 </Structure>
 </Data>
 </Tag>
@@ -33488,7 +33548,7 @@ When relay is open "ready to weld"]]>
 </Data>
 </Tag>
 <Tag Name="sMutingLampOff" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
-<Data>01 00 00 A8 00 00 00 00 D5 D9 36 00 D5 D9 36 00 
+<Data>01 00 00 A8 00 00 00 00 2B CD 2B 00 2B CD 2B 00 
 01 00 00 00 00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="SFC_STEP">
@@ -33505,8 +33565,8 @@ When relay is open "ready to weld"]]>
 <DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PauseTimer" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="3594709"/>
-<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="3594709"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="2870571"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="2870571"/>
 <DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="1"/>
 <DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -33912,7 +33972,7 @@ When relay is open "ready to weld"]]>
 </Data>
 </Tag>
 <Tag Name="sTurnOffMute1" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
-<Data>01 00 00 08 64 00 00 00 67 00 00 00 67 00 00 00 
+<Data>01 00 00 08 64 00 00 00 69 00 00 00 69 00 00 00 
 01 00 00 00 00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="SFC_STEP">
@@ -33929,8 +33989,8 @@ When relay is open "ready to weld"]]>
 <DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PauseTimer" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
-<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="103"/>
-<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="103"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="105"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="105"/>
 <DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="1"/>
 <DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -33938,7 +33998,7 @@ When relay is open "ready to weld"]]>
 </Data>
 </Tag>
 <Tag Name="sTurnOffMute2" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
-<Data>01 00 00 08 00 00 00 00 04 00 00 00 04 00 00 00 
+<Data>01 00 00 08 00 00 00 00 03 00 00 00 03 00 00 00 
 01 00 00 00 00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="SFC_STEP">
@@ -33955,8 +34015,8 @@ When relay is open "ready to weld"]]>
 <DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PauseTimer" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="4"/>
-<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="4"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="3"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="3"/>
 <DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="1"/>
 <DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -34383,7 +34443,7 @@ When relay is open "ready to weld"]]>
 </Data>
 </Tag>
 <Tag Name="s_001" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
-<Data>01 00 00 A8 00 00 00 00 06 DB 36 00 06 DB 36 00 
+<Data>01 00 00 A8 00 00 00 00 5F CE 2B 00 5F CE 2B 00 
 01 00 00 00 00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="SFC_STEP">
@@ -34400,8 +34460,8 @@ When relay is open "ready to weld"]]>
 <DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PauseTimer" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="3595014"/>
-<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="3595014"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="2870879"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="2870879"/>
 <DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="1"/>
 <DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -40616,7 +40676,7 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 </Data>
 </Tag>
 <Tag Name="sHomeOrientInitial" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
-<Data>01 02 80 AA 14 00 00 00 03 DE 36 00 03 DE 36 00 
+<Data>01 02 80 AA 14 00 00 00 5C D1 2B 00 5C D1 2B 00 
 01 00 00 00 00 00 00 00 E8 03 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="SFC_STEP">
@@ -40633,8 +40693,8 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 <DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PauseTimer" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="20"/>
-<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="3595779"/>
-<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="3595779"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="2871644"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="2871644"/>
 <DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="1"/>
 <DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="1000"/>
@@ -40746,7 +40806,7 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 </Data>
 </Tag>
 <Tag Name="sHomeShuttleInitial" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
-<Data>01 02 00 A8 14 00 00 00 6A DC 36 00 6A DC 36 00 
+<Data>01 02 00 A8 14 00 00 00 CB CF 2B 00 CB CF 2B 00 
 01 00 00 00 00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="SFC_STEP">
@@ -40763,8 +40823,8 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 <DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PauseTimer" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="20"/>
-<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="3595370"/>
-<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="3595370"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="2871243"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="2871243"/>
 <DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="1"/>
 <DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -40876,7 +40936,7 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 </Data>
 </Tag>
 <Tag Name="sHomeTurretInitial" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
-<Data>01 02 00 A8 14 00 00 00 A7 DC 36 00 A7 DC 36 00 
+<Data>01 02 00 A8 14 00 00 00 06 D0 2B 00 06 D0 2B 00 
 01 00 00 00 00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="SFC_STEP">
@@ -40893,8 +40953,8 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 <DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PauseTimer" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="20"/>
-<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="3595431"/>
-<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="3595431"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="2871302"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="2871302"/>
 <DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="1"/>
 <DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -41006,7 +41066,7 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 </Data>
 </Tag>
 <Tag Name="sHomeWeldHeadLeftInitial" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
-<Data>01 02 00 A8 00 00 00 00 CF E0 36 00 CF E0 36 00 
+<Data>01 02 00 A8 00 00 00 00 32 D4 2B 00 32 D4 2B 00 
 01 00 00 00 00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="SFC_STEP">
@@ -41023,8 +41083,8 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 <DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PauseTimer" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="3596495"/>
-<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="3596495"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="2872370"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="2872370"/>
 <DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="1"/>
 <DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -41136,7 +41196,7 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 </Data>
 </Tag>
 <Tag Name="sHomeWeldHeadRightInitial" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
-<Data>01 02 00 A8 00 00 00 00 27 DE 36 00 27 DE 36 00 
+<Data>01 02 00 A8 00 00 00 00 86 D1 2B 00 86 D1 2B 00 
 01 00 00 00 00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="SFC_STEP">
@@ -41153,8 +41213,8 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 <DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PauseTimer" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="3595815"/>
-<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="3595815"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="2871686"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="2871686"/>
 <DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="1"/>
 <DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -41266,7 +41326,7 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 </Data>
 </Tag>
 <Tag Name="sHomeWireFeedInitial" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
-<Data>01 02 00 A8 14 00 00 00 E1 E0 36 00 E1 E0 36 00 
+<Data>01 02 00 A8 14 00 00 00 46 D4 2B 00 46 D4 2B 00 
 01 00 00 00 00 00 00 00 00 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="SFC_STEP">
@@ -41283,8 +41343,8 @@ If the Next PartID is Not Equal to the Last PartID then latch on the SMAC Needss
 <DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PauseTimer" DataType="BOOL" Value="0"/>
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="20"/>
-<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="3596513"/>
-<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="3596513"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="2872390"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="2872390"/>
 <DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="1"/>
 <DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -56604,11 +56664,11 @@ D6 D2 99 43 00 B1 48 3F 68 33 D7 43 31 18 06 C3
 50 B6 6D 42 CA A6 0F 43 36 BD 09 44 18 DD 7E 42 
 D6 D2 99 43 10 A5 31 42 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 40 2F 00 00 80 
-11 00 00 80 04 09 F2 00 C0 7E 0A 00 C2 20 6E 1B 
-01 00 00 00 28 00 00 00 00 02 01 1D 30 6D 8D 45 
+11 00 00 80 04 09 F2 00 70 7C 0A 00 C2 20 6E 1B 
+01 00 00 00 28 00 00 00 00 02 01 CD B0 26 46 5D 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-11 00 00 80 0E 00 00 80 04 09 F2 00 1C 5F 0C 00 
+11 00 00 80 0E 00 00 80 04 09 F2 00 CC 5C 0C 00 
 F8 85 F2 17 20 00 00 00</Data>
 <Data Format="Decorated">
 <Structure DataType="VisionData">
@@ -56654,7 +56714,7 @@ F8 85 F2 17 20 00 00 00</Data>
 <StructureMember Name="MappingImageFilename" DataType="STRING">
 <DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="-2147483601"/>
 <DataValueMember Name="DATA" DataType="STRING" Radix="ASCII">
-<![CDATA['$11$00$00$80$04$t$F2$00$C0~$l$00$C2 n$1B$01$00$00$00($00$00$00$00$02$01$1D0m$8DE$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$11$00$00$80$0E$00$00$80$04$t$F2$00$1C_$p$00$F8$85$F2$17']]>
+<![CDATA['$11$00$00$80$04$t$F2$00p|$l$00$C2 n$1B$01$00$00$00($00$00$00$00$02$01$CD$B0&F]$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$11$00$00$80$0E$00$00$80$04$t$F2$00$CC\$p$00$F8$85$F2$17']]>
 </DataValueMember>
 </StructureMember>
 <DataValueMember Name="SaveImageFiles" DataType="BOOL" Value="0"/>
